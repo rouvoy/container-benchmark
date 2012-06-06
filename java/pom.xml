@@ -13,7 +13,7 @@
   <name>[FraSCAti] Container Benchmark - Java Suite</name>
 
   <modules>
-    <module>application</module>
+    <module>applications</module>
     <module>benchmark</module>
   </modules>
 
