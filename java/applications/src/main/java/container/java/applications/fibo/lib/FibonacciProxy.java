@@ -18,7 +18,7 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.lib;
+package container.java.applications.fibo.lib;
 
 import static java.lang.Thread.currentThread;
 import static java.lang.reflect.Proxy.newProxyInstance;
@@ -26,7 +26,7 @@ import static java.lang.reflect.Proxy.newProxyInstance;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import container.java.applications.api.IFibonacci;
+import container.java.applications.fibo.api.IFibonacci;
 
 /**
  * Proxy implementation of the Fibonacci algorithm.

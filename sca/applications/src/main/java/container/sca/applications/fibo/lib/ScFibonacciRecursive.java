@@ -18,25 +18,19 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.lib;
+package container.sca.applications.fibo.lib;
 
-import container.java.applications.api.IFibonacci;
+import org.osoa.sca.annotations.EagerInit;
+import org.osoa.sca.annotations.Scope;
+
+import container.java.applications.fibo.lib.FibonacciRecursive;
 
 /**
- * Interceptor implementation of the Fibonacci algorithm.
+ * SCA-based implementation of the Fibonacci algorithm.
  * 
  * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
  */
-public class FibonacciInterceptor extends Delegate<IFibonacci> implements IFibonacci {
-
-    public FibonacciInterceptor(IFibonacci fib) {
-        setDelegate(fib);
-    }
-    
-	/* (non-Javadoc)
-	 * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
-	 */
-	public long compute(int n) {
-		return this.delegate.compute(n);
-	}
+@Scope("COMPOSITE")
+@EagerInit
+public class ScFibonacciRecursive extends FibonacciRecursive {
 }

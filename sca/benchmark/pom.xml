@@ -8,12 +8,12 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   
-  <artifactId>container-sca-benchmark</artifactId>
+  <artifactId>container-frascati-benchmark</artifactId>
   <packaging>jar</packaging>
-  <name>[CBSE] Container Benchmark - SCA Benchmark</name>
+  <name>[CBSE] Container Benchmark - FraSCAti Benchmark</name>
 
   <properties>
-    <benchmark.class>container.sca.benchmark.FraSCAtiInterfaceInvocationBenchmark</benchmark.class>
+    <benchmark.class>container.sca.benchmark.FraSCAtiFibonacciBenchmark</benchmark.class>
     <frascati.version>1.5-SNAPSHOT</frascati.version>
   </properties>
 

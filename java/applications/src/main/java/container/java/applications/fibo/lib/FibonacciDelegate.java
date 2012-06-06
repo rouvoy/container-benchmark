@@ -18,12 +18,20 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.benchmark;
+package container.java.applications.fibo.lib;
 
-import container.java.applications.api.IFibonacci;
+import container.java.applications.fibo.api.IFibonacci;
 
-import com.google.caliper.SimpleBenchmark;
-
-public class StaticInterfaceInvocation extends SimpleBenchmark {
-    protected IFibonacci fib;
+/**
+ * Naive implementation of the Fibonacci algorithm.
+ * 
+ * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
+ */
+public class FibonacciDelegate extends Delegate<IFibonacci> implements IFibonacci {
+    /* (non-Javadoc)
+	 * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
+	 */
+	public long compute(int n) {
+		return (n <= 1) ? n : this.delegate.compute(n - 1) + this.delegate.compute(n - 2);
+	}
 }

@@ -18,12 +18,12 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.sca.applications;
+package container.sca.applications.fibo.lib;
 
 import org.osoa.sca.annotations.EagerInit;
 import org.osoa.sca.annotations.Scope;
 
-import container.java.applications.lib.FibonacciIterative;
+import container.java.applications.fibo.lib.FibonacciDelegate;
 
 /**
  * SCA-based implementation of the Fibonacci algorithm.
@@ -32,5 +32,5 @@ import container.java.applications.lib.FibonacciIterative;
  */
 @Scope("COMPOSITE")
 @EagerInit
-public class ScFibonacciIterative extends FibonacciIterative {
+public class ScFibonacciDelegate extends FibonacciDelegate {
 }

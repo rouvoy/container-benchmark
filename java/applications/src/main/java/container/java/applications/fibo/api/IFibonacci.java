@@ -18,19 +18,22 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.sca.applications;
-
-import org.osoa.sca.annotations.EagerInit;
-import org.osoa.sca.annotations.Scope;
-
-import container.java.applications.lib.FibonacciRecursive;
+package container.java.applications.fibo.api;
 
 /**
- * SCA-based implementation of the Fibonacci algorithm.
+ * Description of the Fibonacci algorithm.
  * 
  * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
  */
-@Scope("COMPOSITE")
-@EagerInit
-public class ScFibonacciRecursive extends FibonacciRecursive {
+public interface IFibonacci {
+
+	/**
+	 * Computes the value of Fibonnaci(n)
+	 * 
+	 * @param n
+	 *            input parameter (must be strictly positive).
+	 * @return the computed value.
+	 */
+	long compute(int n);
+
 }

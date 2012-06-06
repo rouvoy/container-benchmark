@@ -31,18 +31,18 @@ import org.objectweb.fractal.julia.Julia;
 import com.google.caliper.Param;
 import com.google.caliper.Runner;
 
-import container.fractal.applications.FibonacciType;
-import container.fractal.applications.lib.FcFibonacciDelegate;
-import container.java.applications.api.IFibonacci;
-import container.java.applications.lib.Fibonacci;
-import container.java.applications.lib.FibonacciIterative;
-import container.java.benchmark.StaticInterfaceInvocation;
+import container.fractal.applications.fibo.api.FibonacciType;
+import container.fractal.applications.fibo.lib.FcFibonacciDelegate;
+import container.java.applications.fibo.api.IFibonacci;
+import container.java.applications.fibo.lib.Fibonacci;
+import container.java.applications.fibo.lib.FibonacciIterative;
+import container.java.benchmark.FibonacciBenchmark;
 
 /**
  * Measures sorting on different distributions of integers.
  */
-public class FractalInterfaceInvocationBenchmark extends
-		StaticInterfaceInvocation {
+public class FractalFibonacciBenchmark extends
+		FibonacciBenchmark {
 	@Param({ "0", "1", "2", "4", "8", "16" })
 	protected int n;
 
@@ -96,6 +96,6 @@ public class FractalInterfaceInvocationBenchmark extends
 	}
 
 	public static void main(String[] args) throws Exception {
-		Runner.main(FractalInterfaceInvocationBenchmark.class, args);
+		Runner.main(FractalFibonacciBenchmark.class, args);
 	}
 }

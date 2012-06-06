@@ -30,14 +30,14 @@ import org.ow2.frascati.util.FrascatiException;
 import com.google.caliper.Param;
 import com.google.caliper.Runner;
 
-import container.java.applications.api.IFibonacci;
-import container.java.benchmark.StaticInterfaceInvocation;
+import container.java.applications.fibo.api.IFibonacci;
+import container.java.benchmark.FibonacciBenchmark;
 
 /**
  * Measures sorting on different distributions of integers.
  */
-public class FraSCAtiInterfaceInvocationBenchmark extends
-        StaticInterfaceInvocation {
+public class FraSCAtiFibonacciBenchmark extends
+        FibonacciBenchmark {
     @Param({ "0", "1", "2", "4", "8", "16" })
     protected int n;
 
@@ -104,6 +104,6 @@ public class FraSCAtiInterfaceInvocationBenchmark extends
     }
 
     public static void main(String[] args) throws Exception {
-        Runner.main(FraSCAtiInterfaceInvocationBenchmark.class, args);
+        Runner.main(FraSCAtiFibonacciBenchmark.class, args);
     }
 }

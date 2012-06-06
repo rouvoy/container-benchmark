@@ -18,26 +18,20 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.lib;
+package container.java.applications.fibo.lib;
 
-import container.java.applications.api.IFibonacci;
+import container.java.applications.fibo.api.IFibonacci;
 
 /**
- * Iterative implementation of the Fibonacci algorithm.
+ * Naive implementation of the Fibonacci algorithm.
  * 
  * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
  */
-public class FibonacciIterative implements IFibonacci {
-    /* (non-Javadoc)
-     * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
-     */
-    public long compute(int n) {
-        if (n<=0) return 0;
-        final long[] values = new long[n+1];
-        values[0] = 0;
-        values[1] = 1;
-        for(int i = 2; i < n+1; i++)
-            values[i] = values[i-1] + values[i-2];
-        return values[n];
-    }
+public class Fibonacci implements IFibonacci {
+	/* (non-Javadoc)
+	 * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
+	 */
+	public long compute(int n) {
+		return (n <= 1) ? n : compute(n - 1) + compute(n - 2);
+	}
 }

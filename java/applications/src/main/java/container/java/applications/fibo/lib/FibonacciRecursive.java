@@ -18,24 +18,32 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.lib;
+package container.java.applications.fibo.lib;
 
-import container.java.applications.api.IDelegate;
+import container.java.applications.fibo.api.IFibonacci;
 
-public class Delegate<T> implements IDelegate<T> {
-    protected T delegate;
-
+/**
+ * Recursive implementation of the Fibonacci algorithm.
+ * 
+ * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
+ */
+public class FibonacciRecursive implements IFibonacci {
     /* (non-Javadoc)
-     * @see org.ow2.frascati.benchmark.api.IDelegate#setDelegate(java.lang.Object)
+     * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
      */
-    public void setDelegate(T del) {
-        this.delegate = del;
+    public long compute(int n) {
+        final long[] fib = new long[n];
+        for (int i = 0; i < n; i++)
+            fib[i] = -1;
+        return compute(fib, n);
     }
-    
-    /* (non-Javadoc)
-     * @see org.ow2.frascati.benchmark.api.IDelegate#getDelegate()
-     */
-    public T getDelegate() {
-        return this.delegate;
+
+    private final long compute(long[] fib, int n) {
+        if (n == 0)
+            return 0;
+        if (fib[n - 1] == -1)
+            fib[n - 1] = (n < 2) ? n : compute(fib, n - 1)
+                    + compute(fib, n - 2);
+        return fib[n - 1];
     }
 }

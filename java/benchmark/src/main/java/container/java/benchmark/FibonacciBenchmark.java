@@ -18,22 +18,12 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.api;
+package container.java.benchmark;
 
-/**
- * Description of the Fibonacci algorithm.
- * 
- * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
- */
-public interface IFibonacci {
+import container.java.applications.fibo.api.IFibonacci;
 
-	/**
-	 * Computes the value of Fibonnaci(n)
-	 * 
-	 * @param n
-	 *            input parameter (must be strictly positive).
-	 * @return the computed value.
-	 */
-	long compute(int n);
+import com.google.caliper.SimpleBenchmark;
 
+public class FibonacciBenchmark extends SimpleBenchmark {
+    protected IFibonacci fib;
 }

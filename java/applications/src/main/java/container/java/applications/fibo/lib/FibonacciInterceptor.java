@@ -18,26 +18,25 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.api;
+package container.java.applications.fibo.lib;
+
+import container.java.applications.fibo.api.IFibonacci;
 
 /**
- * Interface to configure a delegate.
+ * Interceptor implementation of the Fibonacci algorithm.
  * 
  * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
  */
-public interface IDelegate<T> {
-    /**
-     * Getter method
-     * 
-     * @return the current delegate
-     */
-    T getDelegate();
+public class FibonacciInterceptor extends Delegate<IFibonacci> implements IFibonacci {
 
-    /**
-     * Setter method
-     * 
-     * @param d
-     *            the new delegate
-     */
-    void setDelegate(T d);
+    public FibonacciInterceptor(IFibonacci fib) {
+        setDelegate(fib);
+    }
+    
+	/* (non-Javadoc)
+	 * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
+	 */
+	public long compute(int n) {
+		return this.delegate.compute(n);
+	}
 }

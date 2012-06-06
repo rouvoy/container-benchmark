@@ -18,15 +18,15 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.fractal.applications.lib;
+package container.fractal.applications.fibo.lib;
 
 import org.objectweb.fractal.api.NoSuchInterfaceException;
 import org.objectweb.fractal.api.control.BindingController;
 import org.objectweb.fractal.api.control.IllegalBindingException;
 import org.objectweb.fractal.api.control.IllegalLifeCycleException;
 
-import container.java.applications.api.IFibonacci;
-import container.java.applications.lib.FibonacciDelegate;
+import container.java.applications.fibo.api.IFibonacci;
+import container.java.applications.fibo.lib.FibonacciDelegate;
 
 /**
  * Component-based implementation of the Fibonacci algorithm.

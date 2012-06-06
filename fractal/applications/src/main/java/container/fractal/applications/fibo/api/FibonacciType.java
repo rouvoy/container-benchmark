@@ -18,7 +18,7 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.fractal.applications;
+package container.fractal.applications.fibo.api;
 
 import static org.objectweb.fractal.util.Fractal.getBindingController;
 import static org.objectweb.fractal.util.Fractal.getContentController;
@@ -33,7 +33,7 @@ import org.objectweb.fractal.api.type.ComponentType;
 import org.objectweb.fractal.api.type.InterfaceType;
 import org.objectweb.fractal.api.type.TypeFactory;
 
-import container.java.applications.api.IFibonacci;
+import container.java.applications.fibo.api.IFibonacci;
 
 /**
  * Component-based implementation of the Fibonacci algorithm.

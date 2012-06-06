@@ -13,7 +13,7 @@
   <name>[CBSE] Container Benchmark - Java Benchmark</name>
 
   <properties>
-    <benchmark.class>container.java.benchmark.JavaInterfaceInvocationBenchmark</benchmark.class>
+    <benchmark.class>container.java.benchmark.JavaFibonacciBenchmark</benchmark.class>
   </properties>
 
   <dependencies>

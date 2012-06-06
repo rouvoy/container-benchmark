@@ -26,14 +26,14 @@
   <service name="fibonacci" promote="fibonacci-impl/fibonacci"/>
   
   <component name="fibonacci-impl">
-    <implementation.java class="container.sca.applications.ScFibonacciDelegate"/>
+    <implementation.java class="container.sca.applications.fibo.lib.ScFibonacciDelegate"/>
     
     <service name="fibonacci">
-      <interface.java interface="container.java.applications.api.IFibonacci"/>
+      <interface.java interface="container.java.applications.fibo.api.IFibonacci"/>
     </service>
     
     <reference name="delegate" target="fibonacci-impl/fibonacci">
-      <interface.java interface="container.java.applications.api.IFibonacci"/>
+      <interface.java interface="container.java.applications.fibo.api.IFibonacci"/>
     </reference>
   </component>
 </composite>

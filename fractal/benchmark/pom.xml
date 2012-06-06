@@ -13,7 +13,7 @@
   <name>[CBSE] Container Benchmark - Fractal Benchmark</name>
 
   <properties>
-    <benchmark.class>container.fractal.benchmark.FractalInterfaceInvocationBenchmark</benchmark.class>
+    <benchmark.class>container.fractal.benchmark.FractalFibonacciBenchmark</benchmark.class>
     <julia.version>2.5.2</julia.version>
   </properties>
 

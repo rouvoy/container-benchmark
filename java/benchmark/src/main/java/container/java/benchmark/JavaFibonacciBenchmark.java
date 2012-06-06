@@ -23,18 +23,18 @@ package container.java.benchmark;
 import com.google.caliper.Param;
 import com.google.caliper.Runner;
 
-import container.java.applications.api.IFibonacci;
-import container.java.applications.lib.Fibonacci;
-import container.java.applications.lib.FibonacciDelegate;
-import container.java.applications.lib.FibonacciInterceptor;
-import container.java.applications.lib.FibonacciIterative;
-import container.java.applications.lib.FibonacciProxy;
-import container.java.applications.lib.FibonacciRecursive;
+import container.java.applications.fibo.api.IFibonacci;
+import container.java.applications.fibo.lib.Fibonacci;
+import container.java.applications.fibo.lib.FibonacciDelegate;
+import container.java.applications.fibo.lib.FibonacciInterceptor;
+import container.java.applications.fibo.lib.FibonacciIterative;
+import container.java.applications.fibo.lib.FibonacciProxy;
+import container.java.applications.fibo.lib.FibonacciRecursive;
 
 /**
  * Measures sorting on different distributions of integers.
  */
-public class JavaInterfaceInvocationBenchmark extends StaticInterfaceInvocation {
+public class JavaFibonacciBenchmark extends FibonacciBenchmark {
     @Param({ "0", "1", "2", "4", "8", "16" })
     protected int n;
 
@@ -126,6 +126,6 @@ public class JavaInterfaceInvocationBenchmark extends StaticInterfaceInvocation 
     }
 
     public static void main(String[] args) throws Exception {
-        Runner.main(JavaInterfaceInvocationBenchmark.class, args);
+        Runner.main(JavaFibonacciBenchmark.class, args);
     }
 }

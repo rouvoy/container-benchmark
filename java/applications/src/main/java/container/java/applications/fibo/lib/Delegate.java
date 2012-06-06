@@ -18,19 +18,24 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.sca.applications;
+package container.java.applications.fibo.lib;
 
-import org.osoa.sca.annotations.EagerInit;
-import org.osoa.sca.annotations.Scope;
+import container.java.applications.fibo.api.IDelegate;
 
-import container.java.applications.lib.Fibonacci;
+public class Delegate<T> implements IDelegate<T> {
+    protected T delegate;
 
-/**
- * SCA-based implementation of the Fibonacci algorithm.
- * 
- * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
- */
-@Scope("COMPOSITE")
-@EagerInit
-public class ScFibonacci extends Fibonacci {
+    /* (non-Javadoc)
+     * @see org.ow2.frascati.benchmark.api.IDelegate#setDelegate(java.lang.Object)
+     */
+    public void setDelegate(T del) {
+        this.delegate = del;
+    }
+    
+    /* (non-Javadoc)
+     * @see org.ow2.frascati.benchmark.api.IDelegate#getDelegate()
+     */
+    public T getDelegate() {
+        return this.delegate;
+    }
 }
