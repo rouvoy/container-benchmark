@@ -55,7 +55,7 @@ public class FraSCAtiFibonacciBenchmark extends
         }
     }
 
-    public enum Implementation { // REPLACE BY THE ASSEMBLY FACTORY
+    public enum Implementation { 
         FRASCATI_SIMPLE_COMPOSITE("fibonacci-simple", false), FRASCATI_DELEGATE_COMPOSITE(
                 "fibonacci-delegate", false), FRASCATI_RECURSIVE_COMPOSITE(
                 "fibonacci-recursive", false), FRASCATI_ITERATIVE_COMPOSITE(

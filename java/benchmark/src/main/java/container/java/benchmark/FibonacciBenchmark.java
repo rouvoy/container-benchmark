@@ -20,10 +20,14 @@
  */
 package container.java.benchmark;
 
-import container.java.applications.fibo.api.IFibonacci;
-
 import com.google.caliper.SimpleBenchmark;
 
+import container.java.applications.fibo.api.IFibonacci;
+
 public class FibonacciBenchmark extends SimpleBenchmark {
-    protected IFibonacci fib;
+	// ABSTRACT BENCHMARKS ARE NOT SUPPORTED BY CALIPER	
+//    @Param({ "0", "1", "2", "4", "8", "16" })
+//    protected int n;
+
+	protected IFibonacci fib;
 }

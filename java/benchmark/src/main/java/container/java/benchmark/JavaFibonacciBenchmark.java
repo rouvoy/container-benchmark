@@ -41,28 +41,16 @@ public class JavaFibonacciBenchmark extends FibonacciBenchmark {
     @Param
     private Implementation implementation;
 
-//    private Method m;
-
+    @Override
     protected void setUp() throws Exception {
         fib = implementation.create();
-//        m = IFibonacci.class.getMethod("compute", int.class);
     }
 
-    public void timeStaticInvoke(int reps) {
+    public void timeFibonacciCompute(int reps) {
         for (int i = 0; i < reps; i++) {
             fib.compute(n);
         }
     }
-
-//    public void timeReflectInvoke(int reps) {
-//        try {
-//            for (int i = 0; i < reps; i++) {
-//                m.invoke(fib, n);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public enum Implementation {
         SIMPLE {
