@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.ow2.frascati.benchmark</groupId>
+    <groupId>org.cbse.container.benchmark</groupId>
     <artifactId>container-benchmark-fractal</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
   
   <artifactId>container-fractal-benchmark</artifactId>
   <packaging>jar</packaging>
-  <name>[FraSCAti] Container Benchmark - Fractal Benchmark</name>
+  <name>[CBSE] Container Benchmark - Fractal Benchmark</name>
 
   <properties>
     <benchmark.class>org.ow2.frascati.benchmark.FractalInterfaceInvocationBenchmark</benchmark.class>
@@ -20,7 +20,7 @@
   <dependencies>
     <dependency>
       <groupId>org.ow2.frascati.benchmark</groupId>
-      <artifactId>container-fractal-application</artifactId>
+      <artifactId>container-fractal-applications</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

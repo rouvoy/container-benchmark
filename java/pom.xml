@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.ow2.frascati.benchmark</groupId>
+    <groupId>org.cbse.container.benchmark</groupId>
     <artifactId>container-benchmark</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
   
   <artifactId>container-benchmark-java</artifactId>
   <packaging>pom</packaging>
-  <name>[FraSCAti] Container Benchmark - Java Suite</name>
+  <name>[CBSE] Container Benchmark - Java Suite</name>
 
   <modules>
     <module>applications</module>

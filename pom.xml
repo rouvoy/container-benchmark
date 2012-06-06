@@ -8,12 +8,12 @@
     <version>5</version>
   </parent>
   
-  <groupId>org.ow2.frascati.benchmark</groupId>
+  <groupId>org.cbse.container.benchmark</groupId>
   <artifactId>container-benchmark</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>[FraSCAti] Container Benchmark Framework</name>
-  <url>http://frascati.ow2.org</url>
+  <name>[CBSE] Container Benchmark Framework</name>
+  <url>http://github.com/rouvoy/container-benchmark</url>
 
   <modules>
     <module>java</module>
