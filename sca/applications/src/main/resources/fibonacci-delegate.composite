@@ -26,14 +26,14 @@
   <service name="fibonacci" promote="fibonacci-impl/fibonacci"/>
   
   <component name="fibonacci-impl">
-    <implementation.java class="org.ow2.frascati.benchmark.lib.ScFibonacciDelegate"/>
+    <implementation.java class="container.sca.applications.ScFibonacciDelegate"/>
     
     <service name="fibonacci">
-      <interface.java interface="org.ow2.frascati.benchmark.api.IFibonacci"/>
+      <interface.java interface="container.java.applications.api.IFibonacci"/>
     </service>
     
     <reference name="delegate" target="fibonacci-impl/fibonacci">
-      <interface.java interface="org.ow2.frascati.benchmark.api.IFibonacci"/>
+      <interface.java interface="container.java.applications.api.IFibonacci"/>
     </reference>
   </component>
 </composite>

@@ -1,11 +1,14 @@
 #!/bin/sh
 
-echo "Benchmark starting..."
+echo "Compilation starting..."
 
 export ALLOCATION_JAR=`find ~/.m2/repository -name java-allocation-instrumenter-2.0.jar`
 
+cd parent
 mvn clean install
-cd java/benchmark
+echo "Compilation completed"
+cd ../java/benchmark
+echo "Benchmark starting..."
 mvn -o exec:exec
 cd ../../fractal/benchmark
 mvn -o exec:exec

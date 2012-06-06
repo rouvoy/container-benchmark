@@ -13,18 +13,18 @@
   <name>[CBSE] Container Benchmark - Fractal Benchmark</name>
 
   <properties>
-    <benchmark.class>org.ow2.frascati.benchmark.FractalInterfaceInvocationBenchmark</benchmark.class>
+    <benchmark.class>container.fractal.benchmark.FractalInterfaceInvocationBenchmark</benchmark.class>
     <julia.version>2.5.2</julia.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>org.ow2.frascati.benchmark</groupId>
+      <groupId>org.cbse.container.benchmark</groupId>
       <artifactId>container-fractal-applications</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.ow2.frascati.benchmark</groupId>
+      <groupId>org.cbse.container.benchmark</groupId>
       <artifactId>container-java-benchmark</artifactId>
       <version>${project.version}</version>
     </dependency>

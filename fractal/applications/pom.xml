@@ -14,7 +14,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.ow2.frascati.benchmark</groupId>
+      <groupId>org.cbse.container.benchmark</groupId>
       <artifactId>container-java-applications</artifactId>
       <version>${project.version}</version>
     </dependency>

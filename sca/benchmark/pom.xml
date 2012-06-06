@@ -13,18 +13,18 @@
   <name>[CBSE] Container Benchmark - SCA Benchmark</name>
 
   <properties>
-    <benchmark.class>org.ow2.frascati.benchmark.FraSCAtiInterfaceInvocationBenchmark</benchmark.class>
+    <benchmark.class>container.sca.benchmark.FraSCAtiInterfaceInvocationBenchmark</benchmark.class>
     <frascati.version>1.5-SNAPSHOT</frascati.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>org.ow2.frascati.benchmark</groupId>
+      <groupId>org.cbse.container.benchmark</groupId>
       <artifactId>container-sca-applications</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.ow2.frascati.benchmark</groupId>
+      <groupId>org.cbse.container.benchmark</groupId>
       <artifactId>container-java-benchmark</artifactId>
       <version>${project.version}</version>
     </dependency>
