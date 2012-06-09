@@ -20,7 +20,7 @@
   <dependencies>
     <dependency>
       <groupId>org.cbse.container.benchmark</groupId>
-      <artifactId>container-sca-applications</artifactId>
+      <artifactId>container-sca-applications-osoa</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -33,5 +33,10 @@
 	  <artifactId>frascati-runtime-factory</artifactId>
   	  <version>${frascati.version}</version>
 	</dependency>
+	<dependency>
+      <groupId>org.ow2.frascati</groupId>
+      <artifactId>frascati-metamodel-oasis-csa</artifactId>
+      <version>${frascati.version}</version>
+    </dependency>
   </dependencies>
 </project>

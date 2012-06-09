@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.cbse.container.benchmark</groupId>
+		<artifactId>container-benchmark-sca</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>container-sca-applications-oasis</artifactId>
+	<packaging>jar</packaging>
+	<name>[CBSE] Container Benchmark - SCA Applications OASIS</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.cbse.container.benchmark</groupId>
+			<artifactId>container-java-applications</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.oasis-open.sca.j</groupId>
+			<artifactId>sca-caa-apis</artifactId>
+			<version>1.1-CD04</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

@@ -18,25 +18,17 @@
  *
  * Contact: romain.rouvoy@univ-lille1.fr
  */
-package container.java.applications.fibo.lib;
+package container.sca.applications.fibo.api;
 
-import container.java.applications.fibo.api.IFibonacci;
+import org.oasisopen.sca.annotation.Remotable;
+
 
 /**
- * Naive implementation of the Fibonacci algorithm.
+ * Description of the Fibonacci algorithm.
  * 
  * @author <a href="mailto:Romain.Rouvoy@lifl.fr">Romain Rouvoy</a>
  */
-public class FibonacciDelegate extends Delegate<IFibonacci> implements IFibonacci {
-	
-	protected long delegate(int n) {
-		 return this.delegate.compute(n);
-	}
-	
-    /* (non-Javadoc)
-	 * @see org.ow2.frascati.benchmark.api.IFibonacci#compute(int)
-	 */
-	public long compute(int n) {
-		return (n <= 1) ? n : delegate(n - 1) + delegate(n - 2);
-	}
+@Remotable // REQUIRED BY TUSCANY
+public interface IFibonacci extends
+		container.java.applications.fibo.api.IFibonacci {
 }

@@ -8,15 +8,19 @@ It uses the [Caliper](http://caliper.googlecode.com) micro-benchmarking framewor
 ## Supported Technologies
 
 The current implementation supports the following technologies:
-- Java (including various proxy/interception technics)
-- [Fractal component model](http://fractal.ow2.org)
-- [Service Component Architecture (SCA) specifications](http://en.wikipedia.org/wiki/Service_Component_Architecture)
+
+* Java (including various proxy/interception technics)
+
+* [Fractal component](http://fractal.ow2.org) model: [Julia](http://fractal.ow2.org/julia)
+
+* [Service Component Architecture (SCA)](http://en.wikipedia.org/wiki/Service_Component_Architecture) specifications: [FraSCAti](http://frascati.ow2.org), [Tuscany](http://tuscany.apache.org)
 
 
 ## Provided Applications
 
 Current benchmarks are based on the following application:
-- [Fibonacci number](http://en.wikipedia.org/wiki/Fibonacci_number)
+
+* [Fibonacci number](http://en.wikipedia.org/wiki/Fibonacci_number)
 
 
 ## Configuration (optional)

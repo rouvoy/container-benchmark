@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<composite xmlns="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+           xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.1"
+           targetNamespace="http://sample"
+           name="fibonacci-delegate-request">
+           
+  <component name="fibonacci-impl">
+    <implementation.java class="container.sca.applications.fibo.lib.FibonacciDelegate"/>
+    
+    <reference name="delegate" target="fibonacci-impl"/>
+  </component>
+
+</composite>

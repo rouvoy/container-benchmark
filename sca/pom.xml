@@ -13,8 +13,10 @@
   <name>[CBSE] Container Benchmark - SCA Suite</name>
 
   <modules>
-    <module>applications</module>
-    <module>benchmark</module>
+    <module>applications-osoa</module>
+    <module>applications-oasis</module>
+    <module>benchmark-frascati</module>
+    <module>benchmark-tuscany</module>
   </modules>
 
 </project>

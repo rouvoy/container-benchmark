@@ -54,7 +54,7 @@ public class FractalFibonacciBenchmark extends
 		fib = implementation.create();
 	}
 
-	public void timeStaticInvoke(int reps) {
+	public void timeFibonacciCompute(int reps) {
 		for (int i = 0; i < reps; i++) {
 			fib.compute(n);
 		}
