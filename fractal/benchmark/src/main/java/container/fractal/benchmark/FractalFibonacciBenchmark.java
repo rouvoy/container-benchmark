@@ -41,17 +41,23 @@ import container.java.benchmark.FibonacciBenchmark;
 /**
  * Measures sorting on different distributions of integers.
  */
-public class FractalFibonacciBenchmark extends
-		FibonacciBenchmark {
+public class FractalFibonacciBenchmark extends FibonacciBenchmark {
 	@Param({ "0", "1", "2", "4", "8", "16" })
 	protected int n;
 
 	@Param
 	private Implementation implementation;
 
+	@Param({ "default", "merge-controllers",
+			"merge-controllers-and-interceptors",
+			"merge-controllers-and-content",
+			"merge-controllers-interceptors-and-content",
+			"no-lifecycle-interceptors" })
+	private String backend;
+
 	@Override
 	protected void setUp() throws Exception {
-		fib = implementation.create();
+		fib = implementation.create(backend);
 	}
 
 	public void timeFibonacciCompute(int reps) {
@@ -78,8 +84,9 @@ public class FractalFibonacciBenchmark extends
 			this.cls = cls;
 		}
 
-		public IFibonacci create() throws Exception {
+		public IFibonacci create(String conf) throws Exception {
 			getProperties().put("fractal.provider", Julia.class.getName());
+			getProperties().put("julia.config", conf+".cfg");
 			Component boot = getBootstrapComponent();
 			Component comp = this.delegate ? FibonacciType.FIBONACCI_DELEGATE
 					.createPrimitive(boot, this.cls) : FibonacciType.FIBONACCI
