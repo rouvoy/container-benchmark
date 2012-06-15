@@ -53,25 +53,25 @@ public class JavaFibonacciBenchmark extends FibonacciBenchmark {
     }
 
     public enum Implementation {
-        SIMPLE {
+        NaiveVersion {
             @Override
             IFibonacci create() {
                 return new Fibonacci();
             }
         },
-        SIMPLE_PROXY_STATIC {
+        NaiveVersion_StaticProxy {
             @Override
             IFibonacci create() {
                 return new FibonacciInterceptor(new Fibonacci());
             }
         },
-        SIMPLE_PROXY_REFLECT {
+        NaiveVersion_ReflectiveProxy {
             @Override
             IFibonacci create() {
                 return FibonacciProxy.newProxy(new Fibonacci());
             }
         },
-        DELEGATE {
+        DelegateVersion {
             @Override
             IFibonacci create() {
                 final FibonacciDelegate fib = new FibonacciDelegate();
@@ -79,7 +79,7 @@ public class JavaFibonacciBenchmark extends FibonacciBenchmark {
                 return fib;
             }
         },
-        DELEGATE_PROXY_REFLECT {
+        DelegateVersion_ReflectiveProxy {
             @Override
             IFibonacci create() {
                 final FibonacciDelegate fib = new FibonacciDelegate();
@@ -88,7 +88,7 @@ public class JavaFibonacciBenchmark extends FibonacciBenchmark {
                 return proxy;
             }
         },
-        DELEGATE_PROXY_STATIC {
+        DelegateVersion_StaticProxy {
             @Override
             IFibonacci create() {
                 final FibonacciDelegate fib = new FibonacciDelegate();
@@ -97,13 +97,13 @@ public class JavaFibonacciBenchmark extends FibonacciBenchmark {
                 return intercept;
             }
         },
-        OPTIMIZED_ITERATIVE {
+        IterativeVersion {
             @Override
             IFibonacci create() {
                 return new FibonacciIterative();
             }
         },
-        OPTIMIZED_RECURSIVE {
+        RecursiveVersion {
             @Override
             IFibonacci create() {
                 return new FibonacciRecursive();

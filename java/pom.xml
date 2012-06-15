@@ -13,8 +13,10 @@
   <name>[CBSE] Container Benchmark - Java Suite</name>
 
   <modules>
-    <module>applications</module>
-    <module>benchmark</module>
+    <module>applications-pojo</module>
+    <module>applications-ioc</module>
+    <module>benchmark-java</module>
+    <module>benchmark-guice</module>
   </modules>
 
 </project>

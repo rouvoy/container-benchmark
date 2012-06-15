@@ -10,7 +10,7 @@
   
   <artifactId>container-frascati-benchmark</artifactId>
   <packaging>jar</packaging>
-  <name>[CBSE] Container Benchmark - FraSCAti Benchmark</name>
+  <name>[CBSE] Container Benchmark - SCA FraSCAti Benchmark</name>
 
   <properties>
     <benchmark.class>container.sca.benchmark.FraSCAtiFibonacciBenchmark</benchmark.class>

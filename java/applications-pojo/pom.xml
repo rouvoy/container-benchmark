@@ -8,9 +8,9 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   
-  <artifactId>container-java-applications</artifactId>
+  <artifactId>container-java-applications-pojo</artifactId>
   <packaging>jar</packaging>
-  <name>[CBSE] Container Benchmark - Java Applications</name>
+  <name>[CBSE] Container Benchmark - Java Applications POJO</name>
 
   <dependencies>
     <dependency>

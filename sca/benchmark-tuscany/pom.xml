@@ -10,7 +10,7 @@
   
   <artifactId>container-tuscany-benchmark</artifactId>
   <packaging>jar</packaging>
-  <name>[CBSE] Container Benchmark - Tuscany Benchmark</name>
+  <name>[CBSE] Container Benchmark - SCA Tuscany Benchmark</name>
 
   <properties>
     <benchmark.class>container.sca.benchmark.TuscanyFibonacciBenchmark</benchmark.class>

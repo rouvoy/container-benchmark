@@ -10,7 +10,7 @@
   
   <artifactId>container-fractal-benchmark</artifactId>
   <packaging>jar</packaging>
-  <name>[CBSE] Container Benchmark - Fractal Benchmark</name>
+  <name>[CBSE] Container Benchmark - Fractal Julia Benchmark</name>
 
   <properties>
     <benchmark.class>container.fractal.benchmark.FractalFibonacciBenchmark</benchmark.class>

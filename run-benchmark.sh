@@ -7,12 +7,16 @@ export ALLOCATION_JAR=`find ~/.m2/repository -name java-allocation-instrumenter-
 cd parent
 mvn clean install
 echo "Compilation completed"
-cd ../java/benchmark
 echo "Benchmark starting..."
+cd ../java/benchmark-java
+mvn -o exec:exec
+cd ../java/benchmark-guice
 mvn -o exec:exec
 cd ../../fractal/benchmark
 mvn -o exec:exec
-cd ../../sca/benchmark
+cd ../../sca/benchmark-frascati
+mvn -o exec:exec
+cd ../benchmark-tuscany
 mvn -o exec:exec
 cd ../..
 

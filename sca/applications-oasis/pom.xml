@@ -15,7 +15,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.cbse.container.benchmark</groupId>
-			<artifactId>container-java-applications</artifactId>
+			<artifactId>container-java-applications-pojo</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
