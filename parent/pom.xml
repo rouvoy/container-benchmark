@@ -27,6 +27,7 @@
     <module>../java</module>
     <module>../fractal</module>
     <module>../sca</module>
+    <module>../osgi</module>
   </modules>
 
   <developers>
@@ -41,8 +42,18 @@
 			<role>Developer</role>
 		</roles>
 	</developer>
-  </developers>
+	<developer>
+		<id>rodrigjc</id>
+		<name>Joao Claudio Americo</name>
+		<email>Joao.Americo@imag.fr</email>
+		<organization>University of Grenoble/LIG</organization>
+		<organizationUrl>http://www.liglab.fr</organizationUrl>
+		<roles>
+			<role>Developer</role>
+		</roles>
+	</developer>
 
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
