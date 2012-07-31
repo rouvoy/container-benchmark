@@ -1,0 +1,8 @@
+<ipojo>
+	<component classname="container.ipojo.applications.fibo.IPOJOFibonacci" immediate="true">
+		<provides>
+			<property name="name" type="java.lang.String" value="fibonacci-simple"/>
+		</provides>
+	</component>
+	<instance component="container.ipojo.applications.fibo.IPOJOFibonacci"/>
+</ipojo>
