@@ -1,0 +1,8 @@
+<ipojo>
+	<component classname="container.ipojo.applications.fibo.IPOJOFibonacciDelegate" immediate="true">
+		<provides>
+			<property name="name" type="java.lang.String" value="fibonacci-delegate"/>
+		</provides>
+	</component>
+	<instance component="container.ipojo.applications.fibo.IPOJOFibonacciDelegate"/>
+</ipojo>
